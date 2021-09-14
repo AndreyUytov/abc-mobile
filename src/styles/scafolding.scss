@@ -56,3 +56,106 @@ input[type='radio'].visually-hidden {
 
   list-style: none;
 }
+
+.content {
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes blick-animation {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 80%;
+  }
+}
+
+.button {
+  padding: 10px;
+  margin: 0;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  &--akcent {
+    position: relative;
+    min-width: 180px;
+    min-height: 40px;
+    border-radius: 50px;
+    background: linear-gradient(
+      90deg,
+      rgba(246, 200, 102, 0.9) -6.2%,
+      rgba(254, 173, 53, 0.9) 100%
+    );
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 87px;
+      height: 100%;
+
+      background: linear-gradient(
+        248.67deg,
+        rgba(255, 255, 255, 0) 30.84%,
+        rgba(255, 255, 255, 0.29) 46.06%,
+        rgba(255, 255, 255, 0) 64.04%
+      );
+      animation: blick-animation 2s infinite ease-in;
+    }
+  }
+}
+
+.description-block {
+  padding: 0;
+  margin: 0;
+
+  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
+  color: #ffffff;
+
+  &--akcent {
+    font-size: 20px;
+    color: var(--akcent-color);
+  }
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 20px;
+    line-height: 23px;
+
+    &--akcent {
+      width: 310px;
+      height: 70px;
+    }
+  }
+
+  .description-block {
+    font-size: 25px;
+    line-height: 35px;
+    &--akcent {
+      font-size: 25px;
+    }
+  }
+}

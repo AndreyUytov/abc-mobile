@@ -1,0 +1,27 @@
+.prediction {
+  min-height: 331px;
+  padding-top: 102px;
+  padding-bottom: 80px;
+  margin-bottom: 53px;
+
+  background-image: url('./../images/prediction-fon.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.prediction__description {
+  max-width: 380px;
+  width: 67%;
+}
+
+@media (min-width: 768px) {
+  .prediction {
+    min-height: 606px;
+    padding-top: 240px;
+    padding-bottom: 110px;
+    margin-bottom: 133px;
+
+    background-image: url('./../images/prediction-fon-desctop.png');
+  }
+}

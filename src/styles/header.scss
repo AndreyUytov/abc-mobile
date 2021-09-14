@@ -1,26 +1,38 @@
 .page-header {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  margin-bottom: 74px;
+
   background-color: var(--fon-color);
+}
+
+.page-header__head-fon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 402px;
+  min-width: 100%;
+
   background-image: url('./../images/fon-head.png');
   background-size: cover;
-  background-position: 55% 50%;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
-.content {
-  min-width: 320px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 16px;
+.page-header__head-picture {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 225px;
+  height: 225px;
+
+  transform: translate(-50%, -50%);
 }
 
 .page-header__upper-text {
   padding: 14px 0;
+  margin: 0;
   margin-bottom: 7px;
 
   font-size: 12px;
@@ -31,12 +43,12 @@
 
   color: var(--gray-color);
 
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .page-header__garant {
   padding: 0;
-  margin: 0 0 24px 0;
+  margin: 0 0 230px 0;
 
   font-weight: 300;
   font-size: 20px;
@@ -47,7 +59,41 @@
   color: var(--gray-color);
 }
 
-.page-header__skin-wrapper {
-  width: 225px;
-  height: 225px;
+.quiz__plan-text {
+  text-transform: none;
+}
+
+@media (min-width: 768px) {
+  .page-header {
+    margin-bottom: 130px;
+  }
+  .page-header__head-fon {
+    min-height: 1019px;
+    background-image: url('./../images/fon-head-desctop.png');
+    background-position: left 40% top -70px;
+  }
+
+  .page-header__head-picture {
+    top: 35%;
+    left: 50%;
+
+    width: 390px;
+    height: 390px;
+  }
+
+  .page-header__upper-text {
+    padding: 36px 0 20px;
+    margin-bottom: 12px;
+
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .page-header__garant {
+    padding: 0;
+    margin: 0 0 432px 0;
+
+    font-size: 25px;
+    line-height: 29px;
+  }
 }
