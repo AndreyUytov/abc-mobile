@@ -1,0 +1,101 @@
+.page-footer__wrapper {
+  width: 100%;
+  padding: 20px 0 30px;
+  margin-bottom: 44px;
+
+  background-image: url('./../images/ball.png'), url('./../images/eye.png');
+  background-repeat: no-repeat;
+  background-size: 36px 52px, 60px 58px;
+  background-position: bottom left, top right;
+}
+
+.page-footer__rune {
+  width: 33px;
+  height: 10px;
+  &:first-of-type {
+    margin-bottom: 37px;
+  }
+}
+
+.bad-script {
+  width: 70%;
+  max-width: 270px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 34px;
+
+  font-family: 'Bad-Script';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.copyright {
+  max-width: 294px;
+  margin: 0 auto;
+
+  padding: 0 14px;
+  font-size: 7px;
+  line-height: 9px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #9d9d9d;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  cursor: pointer;
+
+  &:hover {
+    color: var(--akcent-color);
+  }
+
+  &--show {
+    overflow: visible;
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-footer__wrapper {
+    width: 100%;
+    padding: 77px 0 102px;
+    margin-bottom: 44px;
+
+    background-size: 122px 164px, 187px 205px;
+  }
+
+  .page-footer__rune {
+    width: 56px;
+    height: 18px;
+    &:first-of-type {
+      margin-bottom: 80px;
+    }
+  }
+
+  .bad-script {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .bad-script__show-more {
+    margin-bottom: 65px;
+
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .copyright {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

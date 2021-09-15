@@ -120,7 +120,7 @@ input[type='radio'].visually-hidden {
         rgba(255, 255, 255, 0.29) 46.06%,
         rgba(255, 255, 255, 0) 64.04%
       );
-      animation: blick-animation 2s infinite ease-in;
+      animation: 2s linear infinite blick-animation;
     }
   }
 }
@@ -157,5 +157,17 @@ input[type='radio'].visually-hidden {
     &--akcent {
       font-size: 25px;
     }
+  }
+}
+
+// animated scroll
+
+.animated-element {
+  opacity: 0;
+
+  transition: opacity 1s ease-in-out;
+
+  &--show {
+    opacity: 1;
   }
 }
