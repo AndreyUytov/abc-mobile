@@ -6,7 +6,7 @@ function onEntry(entry) {
   })
 }
 
-let observer = new IntersectionObserver(onEntry, { threshold: [0.5] })
+let observer = new IntersectionObserver(onEntry, { threshold: [0.3] })
 let elements = document.querySelectorAll('.animated-element')
 for (let elm of elements) {
   observer.observe(elm)

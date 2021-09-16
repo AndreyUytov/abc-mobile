@@ -1,8 +1,11 @@
 .quiz__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
 
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 
@@ -10,6 +13,7 @@
   background-repeat: no-repeat;
   background-size: 36px 52px, 60px 58px;
   background-position: bottom 35px left, top 67px right;
+  background-color: var(--fon-color);
 
   overflow-y: auto;
 }
@@ -98,6 +102,99 @@
   letter-spacing: 0.1em;
 
   color: var(--gray-color);
+}
+
+.quiz__label {
+  position: relative;
+  width: 100%;
+  height: 40px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(228, 228, 228, 0.9) -6.2%,
+    rgba(203, 203, 203, 0.9) 100%
+  );
+  border-radius: 50px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  &--invalid {
+    border: 1px solid #ee5353;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+
+    width: 15px;
+    height: 6px;
+
+    transform: translateY(-50%);
+
+    background-image: url('./../images/arrow.png');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  & input {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #202024;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    outline: none;
+  }
+}
+
+.quiz__loading {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #202024;
+}
+
+.quiz__svg {
+  margin-bottom: 27px;
+}
+
+.quiz__loading-text {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: var(--gray-color);
+}
+
+@keyframes loading {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.quiz__svg {
+  animation: loading 1.5s linear infinite;
 }
 
 @media (min-width: 768px) {
