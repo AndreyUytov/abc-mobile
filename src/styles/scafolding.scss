@@ -123,6 +123,24 @@ input[type='radio'].visually-hidden {
       animation: 2s linear infinite blick-animation;
     }
   }
+  &--fetch {
+    max-width: 400px;
+    min-width: 240px;
+    background: linear-gradient(
+      90deg,
+      rgba(76, 217, 100, 0.9) -6.2%,
+      rgba(50, 185, 73, 0.9) 100%
+    );
+
+    &::before {
+      background: linear-gradient(
+        248.67deg,
+        rgba(255, 255, 255, 0) 30.84%,
+        rgba(255, 255, 255, 0.29) 46.06%,
+        rgba(255, 255, 255, 0) 64.04%
+      );
+    }
+  }
 }
 
 .description-block {

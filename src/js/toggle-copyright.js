@@ -1,6 +1,10 @@
 const $copyright = document.querySelector('.copyright')
 
-$copyright.addEventListener('click', () => {
-  $copyright.classList.toggle('copyright--show')
-  $copyright.scrollIntoView()
-})
+const toggleCopyright = (evt) => {
+  evt.target.classList.toggle('copyright--show')
+  evt.target.scrollIntoView()
+}
+
+$copyright.addEventListener('click', toggleCopyright)
+
+export { toggleCopyright }
