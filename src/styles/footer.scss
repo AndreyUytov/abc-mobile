@@ -82,5 +82,7 @@
   .copyright {
     font-size: 10px;
     line-height: 12px;
+
+    margin-bottom: -24px; // чтобы скрыть последние 2 строчки - line-height * 2 = 24
   }
 }
