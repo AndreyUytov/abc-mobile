@@ -1,5 +1,3 @@
-import { toggleCopyright } from './toggle-copyright'
-
 export default function renderFinalScreen(quizWrapper) {
   let date = new Date()
   date.setDate(date.getDate() + 1)
@@ -35,8 +33,6 @@ export default function renderFinalScreen(quizWrapper) {
       </div>
   </div>
   `
-  const copyright = document.getElementById('copyright')
-  copyright.addEventListener('click', toggleCopyright)
 
   const dataContainer = document.getElementById('data')
 

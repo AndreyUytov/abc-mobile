@@ -37,6 +37,7 @@
 .copyright {
   max-width: 294px;
   margin: 0 auto;
+  margin-bottom: -18px; // чтобы скрыть последние 2 строчки - line-height * 2 = 18
 
   padding: 0 14px;
   font-size: 7px;
@@ -46,23 +47,6 @@
   text-transform: uppercase;
 
   color: #9d9d9d;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-
-  cursor: pointer;
-
-  &:hover {
-    color: var(--akcent-color);
-  }
-
-  &--show {
-    overflow: visible;
-    display: block;
-  }
 }
 
 @media (min-width: 768px) {
